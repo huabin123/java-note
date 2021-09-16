@@ -6,7 +6,7 @@
 
 #### 操作流程
 
-![代码提交同步流程](https://gitee.com/huawesome/my-picture/raw/master/img/202109162323127.png)
+![image-20210917074354176](https://gitee.com/huawesome/my-picture/raw/master/img/202109170743213.png)
 
 #### 常用命令
 
