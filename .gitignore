@@ -24,6 +24,6 @@ hs_err_pid*
 
 .DS_Store
 
-.md.baiduyun.uploading.cfg
+*.baiduyun.uploading.cfg
 
 .idea
