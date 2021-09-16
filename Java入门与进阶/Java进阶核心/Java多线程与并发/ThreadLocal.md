@@ -12,6 +12,8 @@ ThreadLocal顾名思义thread线程local本地，是线程本地的一个东西�
 
 ThreadLocal本身不保存数据，ThreadLocal类中有一个map，用来存储每一个线程中的变量。
 
+
+
 ### ThreadLocal使用场景
 
 > session管理和数据库链接管理
