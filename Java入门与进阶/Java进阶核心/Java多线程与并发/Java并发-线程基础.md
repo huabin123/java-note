@@ -4,7 +4,7 @@
 
 状态转换：
 
-![image-20210916172724349](https://gitee.com/huawesome/my-picture/raw/master/img/202109161727423.png)
+![image-20210916194154926](https://gitee.com/huawesome/my-picture/raw/master/img/202109161941966.png)
 
 生命周期：
 
