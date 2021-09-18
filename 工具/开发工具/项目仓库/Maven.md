@@ -20,8 +20,17 @@ $ mvn -v
 
 ### 修改本地仓库
 
-- 指定本地仓库位置的配置信息文件：apache-maven-3.2.2\conf\settings.xml
-- 在根标签settings下添加如下内容：[本地仓库路径，也就是RepMaven.zip的解压目录]
+- 指定本地仓库位置的配置信息文件：
+
+  ```sh
+  $ vim apache-maven-3.2.2\conf\settings.xml
+  ```
+
+- 添加如下内容：[本地仓库路径，也就是RepMaven.zip的解压目录]
+
+  ```sh
+  <localRepository>maven解压目录</localRepository>
+  ```
 
 ### 第一个Maven工程
 
