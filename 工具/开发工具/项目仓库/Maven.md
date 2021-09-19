@@ -2,23 +2,15 @@
 
 ## Maven基本使用
 
-### 解压部署Maven核心程序
+### 下载及安装
 
-- 检查JAVA_HOME环境变量
+[下载地址](https://link.zhihu.com/?target=http%3A//maven.apache.org/download.cgi%23)
 
-```sh
-echo $JAVA_HOME$
-```
+[配置环境变量](https://app.gitbook.com/@1184884206/s/java/gong-ju/mac/mac/mac-pei-zhi-huan-jing-bian-liang)
 
-- 解压Maven核心程序解压到一个非中文无空格的目录下
-- 配置环境变量
-- 查看Maven版本信息验证安装是否正确
+### 修改配置文件
 
-```sh
-$ mvn -v
-```
-
-### 修改本地仓库
+#### 修改本地仓库
 
 - 指定本地仓库位置的配置信息文件：
 
@@ -31,6 +23,23 @@ $ mvn -v
   ```sh
   <localRepository>maven解压目录</localRepository>
   ```
+
+#### 修改远程仓库
+
+159行添加阿里云仓库
+
+```xml
+<mirror>
+  <id>alimaven</id>
+  <mirrorOf>central</mirrorOf>
+  <name>aliyun maven</name>
+  <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+</mirror>
+```
+
+### 在IDE中的设置
+
+![image-20210919105605291](https://gitee.com/huawesome/my-picture/raw/master/img/202109191056365.png)
 
 ### 第一个Maven工程
 
