@@ -10,7 +10,7 @@
 
 ### 修改配置文件
 
-#### 修改本地仓库
+#### 指定本地仓库
 
 - 指定本地仓库位置的配置信息文件：
 
@@ -24,7 +24,7 @@
   <localRepository>maven解压目录</localRepository>
   ```
 
-#### 修改远程仓库
+#### 指定远程仓库
 
 159行添加阿里云仓库
 
@@ -37,9 +37,24 @@
 </mirror>
 ```
 
+或者其他的源
+
+```xml
+<mirror>  
+	<id>nexus</id>  
+	<mirrorOf>*</mirrorOf>  
+	<name>Nexus Mirror</name>  
+	<url>http://nkss-ict.ichangtou.com.cn/content/groups/public/</url>  
+</mirror>
+```
+
+
+
 ### 在IDE中的设置
 
-![image-20210919105605291](https://gitee.com/huawesome/my-picture/raw/master/img/202109191056365.png)
+`file`-->`other settings`-->`perfermence for new project`
+
+![image-20210919125630736](https://gitee.com/huawesome/my-picture/raw/master/img/202109191256807.png)
 
 ### 第一个Maven工程
 
