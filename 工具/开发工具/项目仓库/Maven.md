@@ -30,10 +30,10 @@
 
 ```xml
 <mirror>
-  <id>alimaven</id>
-  <mirrorOf>central</mirrorOf>
-  <name>aliyun maven</name>
-  <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+    <id>nexus-aliyun</id>
+    <mirrorOf>central</mirrorOf>
+    <name>Nexus aliyun</name>
+    <url>http://maven.aliyun.com/nexus/content/groups/public</url>
 </mirror>
 ```
 
@@ -124,6 +124,59 @@ public class HelloTest {
   ```
 
   > 注意：运行Maven命令时一定要进入pom.xml文件所在的目录！
+
+### pom.xml配置文件详解
+
+#### 节点分布
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+            http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 基本配置 -->
+    <groupId>...</groupId>  # 项目组编号 例如，一家银行集团com.company.bank拥有所有银行相关项目。
+    <artifactId>...</artifactId>  # 这是项目的ID。这通常是项目的名称。 例如，consumer-banking。
+    <version>...</version>  # 这是项目的版本。与groupId一起使用，artifact在存储库中用于将版本彼此分 																离。 例如：com.company.bank:consumer-banking:1.0，					    															com.company.bank:consumer-banking:1.1
+    <packaging>...</packaging>  # 项目打包方式，有以下值：pom, jar, maven-plugin, ejb, war, ear, 																		rar, par
+
+
+    <!-- 依赖配置 -->
+    <dependencies>...</dependencies>  # 项目相关依赖配置，如果在父项目写的依赖，会被子项目引用。一般会																					在父项目中定义子项目中所有共用的依赖。
+    <parent>...</parent>  # 用于确定父项目的坐标位置。
+    <dependencyManagement>...</dependencyManagement>
+    <modules>...</modules>
+    <properties>...</properties>  # 用于定义pom常量 如：<java.version>1.7</java.version>
+  																	上面这个常量可以在pom文件的任意地方通过${Java.version}来引用
+
+    <!-- 构建配置 -->
+    <build>...</build>
+    <reporting>...</reporting>
+
+    <!-- 项目信息 -->
+    <name>...</name>
+    <description>...</description>
+    <url>...</url>
+    <inceptionYear>...</inceptionYear>
+    <licenses>...</licenses>
+    <organization>...</organization>
+    <developers>...</developers>
+    <contributors>...</contributors>
+
+    <!-- 环境设置 -->
+    <issueManagement>...</issueManagement>
+    <ciManagement>...</ciManagement>
+    <mailingLists>...</mailingLists>
+    <scm>...</scm>
+    <prerequisites>...</prerequisites>
+    <repositories>...</repositories>
+    <pluginRepositories>...</pluginRepositories>
+    <distributionManagement>...</distributionManagement>
+    <profiles>...</profiles>
+</project>
+```
 
 
 
