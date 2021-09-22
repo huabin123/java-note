@@ -108,4 +108,75 @@
 
 ### await() signal() signalAll()
 
-**
+## 线程异常
+
+### 线程异常没有被捕获的原因
+
+Thread类中有一个dispatchUncaughtException的方法来分发未捕获的异常。
+
+这个方法只被JVM调用
+
+- **Thread#getUncaughtExceptionHandler**：获取UncaughtExceptionHandler接口实现类
+
+![image-20210922100933350](https://gitee.com/huawesome/my-picture/raw/master/img/202109221009424.png)
+
+> UncaughtExceptionHandler是Thread中定义的接口，在Thread类中，uncaughtExceptionHandler默认是null，因此该方法返回group，即实现了UncaughtExceptionHandler接口的ThreadGroup类
+
+- **UncaughtExceptionHandler#uncaughtException：** ThreadGroup 类的 uncaughtException 方法实现
+
+![image-20210922101400913](https://gitee.com/huawesome/my-picture/raw/master/img/202109221014945.png)
+
+> 因为在Thread类中没有对ThreadGroup parent和Thread.getDefaultUncaughtExceptionHandler()进行赋值，因此将进入最后一层条件，将异常直接打印到控制台中，对异常不做任何处理。
+
+
+
+### 线程异常处理
+
+分析源码后有两个思路：
+
+1. 让`ThreadGroup`不为null；
+2. 让`UncaughtExceptionHandler`类型的变量不为null。
+
+### 线程池异常处理
+
+一般应用中线程都是线程池创建复用的，因此对线程池的异常处理就是为线程池工厂类`ThreadFactory`类生成的线程生成的线程添加异常处理器
+
+- 默认异常处理器
+
+  ```java
+  Thread.setDefaultUncaughtExceptionHandler(new  ExceptionHandler());
+   ExecutorService es = Executors.newCachedThreadPool();
+  es.execute(new Task(i++))
+  ```
+
+- 自定义异常处理器
+
+  ```java
+  ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1,
+          0L, TimeUnit.MILLISECONDS,
+          new LinkedBlockingQueue<Runnable>());
+  threadPoolExecutor.setThreadFactory(new MyThreadFactory());
+  threadPoolExecutor.execute(new Task(i++));
+  ```
+
+- 自定义工厂类：MyThreadFactory.java
+
+  ```java
+  private static class MyThreadFactory implements ThreadFactory {
+    @Override
+    public Thread newThread(Runnable r) {
+      Thread t = new Thread();
+      //自定义UncaughtExceptionHandler
+      t.setUncaughtExceptionHandler(new ExceptionHandler());
+      return t;
+     }
+  }
+  ```
+
+  > 为什么异常要由线程自身进行捕获？
+
+  来自JVM的设计理念，“线程是独立执行的代码片段，线程的问题应该由线程自己来解决，而不要委托到外部”。因此，任务抛出的异常应该在线程代码边界之内处理掉，而不应该在线程方法外面由其他线程处理。
+
+### 线程执行 Callable 型任务时的异常处理
+
+Callable 任务抛出的异常能在代码中通过 try-catch 捕获到，但是**只有调用 get 方法**后才能捕获到
