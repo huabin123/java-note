@@ -26,7 +26,7 @@ IOC（inversion of control）意思是反转控制，什么是反转控制，常
 
 1. 新建application.properties配置ioc.bean.scan属性，指定扫描那个文件目录下的类
 
-    ![](https://gitee.com/huawesome/my-picture/raw/master/img/202109231443960.png)
+    ![img-202109231443960](https://gitee.com/huawesome/my-picture/raw/master/img/202109231443960.png)
 
 2. 定义MyComponent注解，标注哪些类需要进行IOC管理
 
