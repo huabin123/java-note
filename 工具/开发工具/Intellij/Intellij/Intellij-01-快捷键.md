@@ -18,7 +18,7 @@
 - 格式化代码 `Command+Option+L`
 - 优化Import `Control+Option+O`
 - 全大小写切换 `Command+Shift+U`
-- 基本代码补全`Control+Space`
+- 基本代码补全`Control+Space`,由于与输入法冲突我改成了 `control+,`
 - 智能代码补全 `Control+Shift+Space`
 - 自动结束代码，行末自动添加分号 `Command+Shift+Enter`
 - 列选中模式 `Command+Shift+8`
@@ -98,7 +98,8 @@
 ### 动态代码模板
 
 - 弹出模板选择窗口，将选定的代码使用动态模板包住 `Command+Option+J`
-- 插入自定义动态代码模板 `Command+J`
+- <u>使用if/else、try/catch包住代码块 `option+command+T`</u>
+- <u>插入自定义动态代码模板 `Command+J`</u>
 
 
 

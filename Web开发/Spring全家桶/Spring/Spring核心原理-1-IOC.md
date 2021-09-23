@@ -27,5 +27,22 @@ IOC（inversion of control）意思是反转控制，什么是反转控制，常
 1. 新建application.properties配置ioc.bean.scan属性，制定扫描那个文件目录下的类
 2. 定义MyComponent注解，标注哪些类需要进行IOC管理
 3. 定义MyAutowrite注解，标注哪些属性进行依赖注入
-4. 读取Properties文件（读取ioc.bean.scan的值）、类名首字母转小写工具方法（bean的名称）
+4. 读取Properties文件（读取ioc.bean.scan的值）、类名首字母转小写工具方法（bean的名称默认是类名首字母小写）
+5. 定义需要进行IOC关联的类UserDao、UserService
+
+### 定位资源
+
+1. 读取application.properties文件的ioc.bean.scan属性，得到需要扫描的文件夹
+
+### 加载类
+
+1. 根据ioc加载需要实例化的对象，保存到classNameSet集合里
+
+### 实例化
+
+1. 实例化对象保存到beanMap容器
+
+### 依赖注入
+
+1. 对已经实例化的对象进行属性注入
 
