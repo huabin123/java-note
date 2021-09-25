@@ -1,6 +1,6 @@
-# Intellij-01-快捷键
+# 通用
 
-## 通用
+## 书签
 
 - 添加到收藏夹`Option+Shift+F`
 - 添加/取消书签 `F3`
@@ -8,7 +8,11 @@
 - 定位到对应数值的书签位置 `Control+数值`
 - 显示所有书签 `Command+F3`
 
-## 智能编码
+## 外观
+
+- 切换主题：==control+`==
+
+# 智能编码
 
 - 跳到代码块开始处 `Command + {`, 结束处`Command + }`
 - 切换上一个idea工作台` Option + Command + {`, 结束处`Option + Command + }`
@@ -43,13 +47,13 @@
 
 
 
-## 编译/运行
+# 编译/运行
 
 - 运行单文件 `Control+Shift+R`
 
 
 
-## 查询/替换
+# 查询/替换
 
 - 查询任何东西 `Double Shift`
 - 全局查找 `Command+Shift+F`
@@ -58,13 +62,13 @@
 
 
 
-### 使用查询
+# 使用查询
 
 - 在文件中查找用法/在类中查找用法 `Option+F7`/ `Command+F7`
 
 
 
-## 导航
+# 导航
 
 - 上一步 `Option+Command+→`
 - 跳到最后一个编辑的地方 `Command+Shift+Delete`
@@ -77,7 +81,7 @@
 
 
 
-## 重构
+# 重构
 
 - 将选中的代码提取为方法 `Command+Option+M`
 - 提取变量 `Command+Option+V`
@@ -87,7 +91,7 @@
 
 
 
-## 版本控制
+# 版本控制
 
 - 提交代码 `Command+K`
 - 更新代码 `Command+T`
@@ -95,7 +99,7 @@
 
 
 
-## 动态代码模板
+# 动态代码模板
 
 - 弹出模板选择窗口，将选定的代码使用动态模板包住 `Command+Option+J`
 - <u>使用if/else、try/catch包住代码块 `option+command+T`</u>
@@ -103,7 +107,7 @@
 
 
 
-## 参考：
+# 参考：
 
 - win，mac快捷键对照https://www.huaweicloud.com/articles/ed481d3385b131ceba1f9cb6a44d15f7.html
 

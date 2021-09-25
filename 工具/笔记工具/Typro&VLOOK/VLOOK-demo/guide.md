@@ -2,7 +2,7 @@
 title: 快速参考手册 - VLOOK™ - Markdown 编辑器 Typora 的主题包和增强插件
 author: MAX°孟兆
 vlook-query: effects=2&ws=none&lmc=3
-vlook-doc-lib: https://naotu.baidu.com/file/bdbefd4820d3f40ba8b2e5f9851219a4
+vlook-doc-lib: https://gitee.com/huawesome/my-note/blob/master/%E5%B7%A5%E5%85%B7/%E7%AC%94%E8%AE%B0%E5%B7%A5%E5%85%B7/Typro&VLOOK/VLOOK-demo/guide.html
 ---
 
 ###### <sub>VLOOK™</sub><br />让你的 Markdown 有了新`{看}(wán)`法<br />──<br /><sup>快速参考手册</sup><br />`#最新版本|V11.0#(theme2)`<br /><br />**MAX°孟兆**<br />*COPYRIGHT © 2016-2021. MAX°DESIGN.*
