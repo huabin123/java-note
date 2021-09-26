@@ -18,5 +18,9 @@
 
 5. 如何实现AOP？项目什么地方实现了AOP？
 
+    [本地链接](/Users/apple/Workspace/java-note/Web开发/Spring全家桶/Spring/Spring核心原理-2-AOP.md#Spring核心原理-2-AOP-AOP基础)
+
+    
+
 
 
