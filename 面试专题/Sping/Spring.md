@@ -30,7 +30,9 @@
 
 8. [Spring中的Bean是线程安全的吗？](/Users/apple/Workspace/java-note/Web开发/Spring全家桶/Spring/Spring核心原理-3-Bean.md#Spring Bean的线程安全问题)
 
-9. Spring中的事务是什么实现的？
+9. [Spring中的事务是什么实现的？](/Users/apple/Workspace/java-note/Web开发/Spring全家桶/Spring/Spring数据访问-2-Spring事务.md)
+
+10. [Spring事务什么时候会失效？](/Users/apple/Workspace/java-note/Web开发/Spring全家桶/Spring/Spring数据访问-2-Spring事务.md)
 
 
 
