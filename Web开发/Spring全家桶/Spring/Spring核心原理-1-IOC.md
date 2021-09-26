@@ -1,5 +1,3 @@
-###### Spring-IOC<br />**huabin**<br />*(c)2021. 版权所有*
-
 [TOC]
 
 
@@ -24,7 +22,7 @@ IOC（inversion of control）意思是反转控制，什么是反转控制，常
 
 根据以上思路，我们整理出来需要使用的技术有注解相关技术、配置文件加载技术、类加载技术、反射技术。
 
-# 简单实现一个IOC
+# 简单实现一个IOC（直接使用的bean的来源）
 
 ## 前期准备
 
@@ -450,7 +448,7 @@ public class IocTest {
 
     public static void main(String[] args) throws Exception {
         MyApplicationContext myApplicationContext = new MyApplicationContext();
-        UserService userService = (UserService)myApplicationContext.getBean("userService");
+        UserService userService = (UserService)myApplicationContext.getBean("userService");  # 使用初始化是保存ApplicationContext对象的方式获得bean
         userService.findUser("张三");
     }
     
