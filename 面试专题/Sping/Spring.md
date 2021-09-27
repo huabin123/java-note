@@ -34,6 +34,8 @@
 
 10. [Spring事务什么时候会失效？](/Users/apple/Workspace/java-note/Web开发/Spring全家桶/Spring/Spring数据访问-2-Spring事务.md)
 
+11. 请讲一讲Spring中的循环依赖？
+
 
 
 
