@@ -34,7 +34,47 @@
 
 10. [Spring事务什么时候会失效？](/Users/apple/Workspace/java-note/Web开发/Spring全家桶/Spring/Spring数据访问-2-Spring事务.md)
 
-11. 请讲一讲Spring中的循环依赖？
+11. [请讲一讲Spring中的循环依赖？](/Users/apple/Workspace/java-note/Web开发/Spring全家桶/Spring/Spring源码-1-Spring循环依赖.md)
+
+12. 单例模式在Spring框架中的应用？
+
+13. Spring-Spring用到了哪些设计模式？
+
+14. Spring-@Configuration的作用和底层原理？
+
+     @Configuration与@Bean都是来自spring的注解，作用是使用类来代替xml配置文件的功能。
+
+     @Configuration
+
+     @configuration用在类上方，声明这个类是一个spring配置类，**执行的功能是代替spring的配置文件**
+
+     也可以说，相当与sprig.xml中的<beans>标签
+
+     ```java
+     @Configuration
+     public class ConfigurationTest {
+         public ConfigurationTest(){
+             System.out.println("this is spring.xml");
+             System.out.println("this is @configuration");
+         }
+     }
+     ```
+
+     [参考](https://zhuanlan.zhihu.com/p/335068145)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

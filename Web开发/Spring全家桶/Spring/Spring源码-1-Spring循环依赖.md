@@ -368,12 +368,6 @@ public Object getEarlyBeanReference(Object bean, String beanName) {
 
     如果要使用二级缓存解决循环依赖，意味着所有Bean在实例化后就要完成AOP代理，这样违背了Spring设计的原则，Spring在设计之初就是通过`AnnotationAwareAspectJAutoProxyCreator`这个后置处理器来在Bean生命周期的最后一步来完成AOP代理，而不是在实例化后就立马进行AOP代理。
 
-    
-
-    
-
-
-
 # 参考
 
 [面试必杀技，讲一讲Spring中的循环依赖](https://zhuanlan.zhihu.com/p/157314153))
